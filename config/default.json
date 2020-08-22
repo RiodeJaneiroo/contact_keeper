@@ -1,4 +1,4 @@
 {
-	"mongoURI": "mongodb+srv://prainua321:prainua321@contactkepper.tkt72.mongodb.net/<dbname>?retryWrites=true&w=majority",
+	"mongoURI": "mongodb+srv://prainua321:prainua321@contactkepper.tkt72.mongodb.net/cp?retryWrites=true&w=majority",
 	"jwtSecret": "secret"
 }
