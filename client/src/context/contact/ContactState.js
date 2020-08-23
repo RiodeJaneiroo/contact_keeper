@@ -1,4 +1,4 @@
-import React, { useRedcer } from 'react';
+import React, { useReducer } from 'react';
 import uuid from 'uuid';
 import ContactContext from './contactContext';
 import contactReducer from './contactReducer';
@@ -46,7 +46,7 @@ const ContactState = (props) => {
       ],
    };
 
-   const [state, dispatch] = useRedcer(contactReducer, initionState);
+   const [state, dispatch] = useReducer(contactReducer, initionState);
 
    // Add Contact
    // Delete Contact
