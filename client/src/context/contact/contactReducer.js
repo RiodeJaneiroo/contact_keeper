@@ -15,6 +15,25 @@ export default (state, action) => {
             ...state,
             contacts: [...state.contacts, action.payload],
          };
+      case DELETE_CONTACT:
+         const idx = state.contacts.findIndex((c) => c.id === action.payload);
+         return {
+            ...state,
+            contacts: [
+               ...state.contacts.slice(0, idx),
+               ...state.contacts.slice(idx + 1),
+            ],
+         };
+      case SET_CURRENT:
+         return {
+            ...state,
+            current: action.payload,
+         };
+      case CLEAR_CURRENT:
+         return {
+            ...state,
+            current: null,
+         };
       default:
          return state;
    }
